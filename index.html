@@ -1,16 +1,294 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Memory Game!</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <h1>Memory Game!</h1>
-    <div id="game">
+<head>
+  <meta charset="UTF-8">
+  <title>Star Wars Challenge!</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Bungee+Spice&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container" id="start">
+    <div class="row">
+      <div class="col-12">
+        <div id="title">
+          <h1> WELCOME TO THE STAR WARS CHALLENGE! </h1> 
+          <p> Get ready to test your Jedi-level memory skills and discover the iconic characters from the Star Wars universe</p>
+        </div>
+      </div>
     </div>
-    <br>
-    <button class ='btn'> Restart   </button>
-    <script src="script.js"></script>
-  </body>
+    <div class="row text-center">
+      <div class="col-sm-6 offset-sm-3 col-12 mt-4 mb-4">
+        <h2>Best Score: <span id="best-score">&mdash;</span></h2>
+      </div>
+    </div>
+    <div class="row text-center">
+      <div class="col-4 offset-4">
+        <button id="start-button" class="btn btn-block btn-lg pt-4 pb-4">Start!</button>
+      </div>
+    </div>
+  </div>
+  <div class="container" id="game">
+    <div class="row">
+      <div class="col-2 offset-1">
+        <div class="game-card-wrapper">
+          <div class="game-card">
+            <div class="front">🛸</div>
+            <div class="back">
+              <img>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="game-card-wrapper">
+          <div class="game-card">
+            <div class="front">🛸</div>
+            <div class="back">
+              <img>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="game-card-wrapper">
+          <div class="game-card">
+            <div class="front">🛸</div>
+            <div class="back">
+              <img>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="game-card-wrapper">
+          <div class="game-card">
+            <div class="front">🛸</div>
+            <div class="back">
+              <img>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="game-card-wrapper">
+          <div class="game-card">
+            <div class="front">🛸</div>
+            <div class="back">
+              <img>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-2 offset-1">
+        <div class="game-card-wrapper">
+          <div class="game-card">
+            <div class="front">🛸</div>
+            <div class="back">
+              <img>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="game-card-wrapper">
+          <div class="game-card">
+            <div class="front">🛸</div>
+            <div class="back">
+              <img>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="game-card-wrapper">
+          <div class="game-card">
+            <div class="front">🛸</div>
+            <div class="back">
+              <img>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="game-card-wrapper">
+          <div class="game-card">
+            <div class="front">🛸</div>
+            <div class="back">
+              <img>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="game-card-wrapper">
+          <div class="game-card">
+            <div class="front">🛸</div>
+            <div class="back">
+              <img>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-2 offset-1">
+        <div class="game-card-wrapper">
+          <div class="game-card">
+            <div class="front">🛸</div>
+            <div class="back">
+              <img>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="game-card-wrapper">
+          <div class="game-card">
+            <div class="front">🛸</div>
+            <div class="back">
+              <img>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-2">
+        <div id="current-score"></div>
+      </div>
+      <div class="col-2">
+        <div class="game-card-wrapper">
+          <div class="game-card">
+            <div class="front">🛸</div>
+            <div class="back">
+              <img>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="game-card-wrapper">
+          <div class="game-card">
+            <div class="front">🛸</div>
+            <div class="back">
+              <img>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-2 offset-1">
+        <div class="game-card-wrapper">
+          <div class="game-card">
+            <div class="front">🛸</div>
+            <div class="back">
+              <img>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="game-card-wrapper">
+          <div class="game-card">
+            <div class="front">🛸</div>
+            <div class="back">
+              <img>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="game-card-wrapper">
+          <div class="game-card">
+            <div class="front">🛸</div>
+            <div class="back">
+              <img>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="game-card-wrapper">
+          <div class="game-card">
+            <div class="front">🛸</div>
+            <div class="back">
+              <img>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="game-card-wrapper">
+          <div class="game-card">
+            <div class="front">🛸</div>
+            <div class="back">
+              <img>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-2 offset-1">
+        <div class="game-card-wrapper">
+          <div class="game-card">
+            <div class="front">🛸</div>
+            <div class="back">
+              <img>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="game-card-wrapper">
+          <div class="game-card">
+            <div class="front">🛸</div>
+            <div class="back">
+              <img>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="game-card-wrapper">
+          <div class="game-card">
+            <div class="front">🛸</div>
+            <div class="back">
+              <img>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="game-card-wrapper">
+          <div class="game-card">
+            <div class="front">🛸</div>
+            <div class="back">
+              <img>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="game-card-wrapper">
+          <div class="game-card">
+            <div class="front">🛸</div>
+            <div class="back">
+              <img>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="end">
+    <h1>You win!</h1>
+    <h4 id="final-score"></h4>
+    <a href="index.html" id="restart-button" class="btn btn-lg p-4">Play again?</a>
+  </div>
+  <script src="app.js"></script>
+</body>
 </html>
