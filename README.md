@@ -1,6 +1,6 @@
 # Star Wars Challenge
 
-The Star Wars Challenge is an interactive web-based game where players test their memory of Star Wars main chracters.
+The Star Wars Challenge is an interactive web-based game where players test their memory of Star Wars main characters.
 
 
 ## Technologies Used
